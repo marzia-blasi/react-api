@@ -32,8 +32,6 @@ function App() {
 
   return (
     <>
-      <p>prova</p>
-
       <div className="container">
         <div className="row">
           {actData &&
@@ -47,8 +45,13 @@ function App() {
                       alt={act.name}
                     />
                     <div className="card-body">
-                      <p className="card-text">{act.name}</p>
+                      <h5 className="card-title">{act.name}</h5>
                     </div>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item">{act.birth_year}</li>
+                      <li className="list-group-item">{act.nationality}</li>
+                      <li className="list-group-item">{act.biography}</li>
+                    </ul>
                   </div>
                 </div>
               );
@@ -64,8 +67,13 @@ function App() {
                       alt={actm.name}
                     />
                     <div className="card-body">
-                      <p className="card-text">{actm.name}</p>
+                      <h5 className="card-title">{actm.name}</h5>
                     </div>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item">{actm.birth_year}</li>
+                      <li className="list-group-item">{actm.nationality}</li>
+                      <li className="list-group-item">{actm.biography}</li>
+                    </ul>
                   </div>
                 </div>
               );
