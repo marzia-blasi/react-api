@@ -6,34 +6,37 @@ function App() {
   const [api, setApi] = useState(url);
   const [actData, setActData] = useState(null);
 
-  useEffect;
-  () => {
+  useEffect(() => {
     fetch(api)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setActData(data);
       });
-  },
-    [api];
-
+  }, [api]);
   return (
     <>
       <p>prova</p>
 
       <div className="container">
         <div className="row">
-          <div className="col">
-            <div className="card">
-              <img src="..." className="card-img-top" alt="..." />
-              <div className="card-body">
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card’s content.
-                </p>
-              </div>
-            </div>
-          </div>
+          {actData &&
+            actData?.map((act) => {
+              return (
+                <div className="col" key={act.id}>
+                  <div className="card">
+                    <img
+                      src={act.image}
+                      className="card-img-top"
+                      alt={act.name}
+                    />
+                    <div className="card-body">
+                      <p className="card-text">{act.name}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </div>
     </>
