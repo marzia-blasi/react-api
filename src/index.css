@@ -4,6 +4,12 @@
   padding: 0;
 }
 
-.card {
-  width: 18rem;
+.card-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-body,
+.list-group-flush {
+  text-align: left;
 }

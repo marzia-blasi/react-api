@@ -37,17 +37,19 @@ function App() {
           {actData &&
             actData?.map((act) => {
               return (
-                <div className="col" key={act.id}>
-                  <div className="card">
+                <div className="col-6 col-md-3 col-lg-2 mb-4" key={act.id}>
+                  <div className="card h-100">
                     <img
                       src={act.image}
                       className="card-img-top"
                       alt={act.name}
                     />
-                    <div className="card-body">
-                      <h5 className="card-title">{act.name}</h5>
+                    <div className="card-body text-start">
+                      <h5 className="card-title text-center text-success">
+                        {act.name}
+                      </h5>
                     </div>
-                    <ul className="list-group list-group-flush">
+                    <ul className="list-group list-group-flush text-start">
                       <li className="list-group-item">{act.birth_year}</li>
                       <li className="list-group-item">{act.nationality}</li>
                       <li className="list-group-item">{act.biography}</li>
@@ -60,16 +62,18 @@ function App() {
             actDataM?.map((actm) => {
               return (
                 <div className="col" key={actm.id}>
-                  <div className="card">
+                  <div className="card h-100">
                     <img
                       src={actm.image}
                       className="card-img-top"
                       alt={actm.name}
                     />
-                    <div className="card-body">
-                      <h5 className="card-title">{actm.name}</h5>
+                    <div className="card-body text-start">
+                      <h5 className="card-title text-center text-start">
+                        {actm.name}
+                      </h5>
                     </div>
-                    <ul className="list-group list-group-flush">
+                    <ul className="list-group list-group-flush text-start">
                       <li className="list-group-item">{actm.birth_year}</li>
                       <li className="list-group-item">{actm.nationality}</li>
                       <li className="list-group-item">{actm.biography}</li>
